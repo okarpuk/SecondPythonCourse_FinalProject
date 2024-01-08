@@ -3,7 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 def pytest_addoption(parser):
-    parser.addoption('--language', action='store', default=None,
+    parser.addoption('--language', action='store', default='en-gb',
                      help="Choose language")
 
 @pytest.fixture(scope="function")
@@ -13,7 +13,7 @@ def browser(request):
     link = "https://selenium1py.pythonanywhere.com/ru/catalogue/coders-at-work_207/"
     browser.get(link)
 
-    if language == "es" or "fr" or "ar" or "ca" or "cs": # перечислить все необходимые/поддерживаемые языки
+    if language == "es" or "fr" or "en-gb": # перечислить все необходимые/поддерживаемые языки
         print(f"\nTest started with chosen language - {language}")
         language_selector = browser.find_element(By.CSS_SELECTOR, f"[value='{language}']")
         language_selector.click()
