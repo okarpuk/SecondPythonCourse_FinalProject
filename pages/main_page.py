@@ -5,3 +5,6 @@ class MainPage(BasePage): # класс-наследник класса BasePage
     def go_to_login_page(self): # аргумент self , чтобы иметь доступ к атрибутам и методам класса
         login_link = self.browser.find_element(By.CSS_SELECTOR, "#login_link") # Так как браузер у нас хранится как аргумент класса BasePage, обращаться к нему нужно соответствующим образом с помощью self
         login_link.click()
+
+    def should_be_login_link(self):
+        self.browser.find_element(By.CSS_SELECTOR, "#login_link_invalid")
