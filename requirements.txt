@@ -1,3 +1,9 @@
+# зафиксируем все пакеты, которые мы используем
+# pip freeze > requirements.txt
+#
+# достаем пакеты из файла
+# pip install -r requirements.txt
+
 attrs==23.1.0
 certifi==2023.11.17
 h11==0.14.0
