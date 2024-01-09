@@ -10,7 +10,7 @@ class BasePage():                      # базовая страница, от �
     def open(self):                 # метод открывает нужную страницу в браузере, используя метод get().
         self.browser.get(self.url)
 
-    def is_element_present(self, how, what):
+    def is_element_present(self, how, what): # Чтобы перехватывать исключение, нужна конструкция try/except
         try:
             self.browser.find_element(how, what)
         except (NoSuchElementException):
