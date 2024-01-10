@@ -12,6 +12,7 @@ def test_guest_can_add_product_to_basket(browser):
    page.book_price_in_basket()
    page.book_price_and_basket_price_should_be_equal()
    page.book_name_and_book_name_in_basket_should_be_equal()
+   # page.should_not_be_success_message()
 
 @pytest.mark.parametrize('link', ["http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer0",
                                   "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer1",
@@ -32,3 +33,4 @@ def test_guest_can_add_product_to_basket(browser, link):
    page.book_price_in_basket()
    page.book_price_and_basket_price_should_be_equal()
    page.book_name_and_book_name_in_basket_should_be_equal()
+   # page.should_not_be_success_message()

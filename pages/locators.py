@@ -22,5 +22,6 @@ class ProductPageLocators():
     BOOK_NAME_IN_BASKET = (By.XPATH, "//div[@id='messages']/div[1]/div/strong")
     BOOK_PRICE = (By.CSS_SELECTOR, ".product_main .price_color")
     BOOK_PRICE_IN_BASKET = (By.XPATH, "//div[@id='messages']/div[3]/div/p/strong")
+    # SUCCESS_MESSAGE = (By.XPATH, "//div[@id='messages']/div[3]/div/p/strong")
 
 

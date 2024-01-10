@@ -1,4 +1,7 @@
-from selenium.common.exceptions import NoSuchElementException
+from telnetlib import EC
+from selenium.common.exceptions import NoSuchElementException, TimeoutException
+from selenium.webdriver.support.wait import WebDriverWait
+
 
 class BasePage():                                 # базовая страница, от которой будут унаследованы все остальные классы
 
@@ -16,3 +19,10 @@ class BasePage():                                 # базовая страни�
         except (NoSuchElementException):
             return False
         return True
+
+    # def is_not_element_present(self, how, what, timeout=4): #метод, который проверяет, что элемент не появляется на странице в течение заданного времени
+    #     try:
+    #         WebDriverWait(self.browser, timeout).until(EC.presence_of_element_located((how, what)))
+    #     except TimeoutException:
+    #         return True
+    #     return False

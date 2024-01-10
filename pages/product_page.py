@@ -41,3 +41,6 @@ class ProductPage(BasePage): # класс-наследник класса BasePa
     def book_price_and_basket_price_should_be_equal(self):
         assert self.book_price() == self.book_price_in_basket(), "Prices are not equal"
         print("Book price is equal to basket price")
+
+    # def should_not_be_success_message(self):
+    #     assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), "Success message is presented, but should not be"
