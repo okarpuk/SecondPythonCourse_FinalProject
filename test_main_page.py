@@ -4,12 +4,12 @@ from .pages.login_page import LoginPage
 
 def test_guest_can_go_to_login_page(browser):
    link = "http://selenium1py.pythonanywhere.com"
-   page = MainPage(browser, link) # создаем объект класса MainPage, передаем в конструктор экземпляр драйвера и url адрес
-   page.open() # открываем страницу
+   page = MainPage(browser, link)                       # создаем объект класса MainPage, передаем в конструктор экземпляр драйвера и url адрес
+   page.open()                                          # открываем страницу
    page.go_to_login_page()
    login_page = LoginPage(browser, browser.current_url) # создаем переменную с новым объектом LoginPage и обязательно передаем ему
                                                         # тот же самый объект драйвера для работы с браузером, а в качестве url передаем текущий адрес
-   login_page.should_be_login_page() # используем методы LoginPage
+   login_page.should_be_login_page()                    # используем методы LoginPage
 
 
 def test_guest_should_see_login_link(browser):
