@@ -10,6 +10,7 @@ def test_guest_can_go_to_login_page(browser):
    page.book_price()
    page.book_price_in_basket()
    page.book_price_and_basket_price_should_be_equal()
+   page.book_name_and_book_name_in_basket_should_be_equal()
 
 
    # login_page = LoginPage(browser, browser.current_url) # создаем переменную с новым объектом LoginPage и обязательно передаем ему

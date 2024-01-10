@@ -22,20 +22,21 @@ class ProductPage(BasePage): # класс-наследник класса BasePa
         except NoAlertPresentException:
             print("No second alert presented")
 
+    def book_name(self):
+        return self.browser.find_element(*ProductPageLocators.BOOK_NAME).text
 
+    def book_name_in_basket(self):
+        return self.browser.find_element(*ProductPageLocators.BOOK_NAME_IN_BASKET).text
 
-
-
+    def book_name_and_book_name_in_basket_should_be_equal(self):
+        assert self.book_name() == self.book_name_in_basket(), "Names are not equal"
+        print("Book name is equal to basket name")
 
     def book_price(self):
-        book_cost = self.browser.find_element(*ProductPageLocators.BOOK_PRICE)
-        book_cost.text
-        return
+        return self.browser.find_element(*ProductPageLocators.BOOK_PRICE).text
 
     def book_price_in_basket(self):
-        book_cost_in_basket = (self.browser.find_element(*ProductPageLocators.BOOK_PRICE_IN_BASKET))
-        book_cost_in_basket.text
-        return
+        return self.browser.find_element(*ProductPageLocators.BOOK_PRICE_IN_BASKET).text
 
     def book_price_and_basket_price_should_be_equal(self):
         assert self.book_price() == self.book_price_in_basket(), "Prices are not equal"
