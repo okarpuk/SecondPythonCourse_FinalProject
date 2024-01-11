@@ -47,5 +47,5 @@ class ProductPage(BasePage): # класс-наследник класса BasePa
         print("Success message is not presented - as expected")
 
     def message_should_disappear(self):
-        assert self.is_disappeared(*ProductPageLocators.DISAPPEARED_MESSAGE), "Message is not disappear, but should"
+        assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), "Message is not disappear, but should"
         print("Message is disappeared - as expected")
