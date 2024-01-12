@@ -17,3 +17,14 @@ def test_guest_should_see_login_link(browser):
    page = MainPage(browser, link)
    page.open()
    page.should_be_login_link()
+
+
+def test_guest_cant_see_product_in_basket_opened_from_main_page(browser):
+   link = "http://selenium1py.pythonanywhere.com/"
+   page = MainPage(browser, link)
+   page.open()
+   page.go_to_basket_page()
+
+
+# Ожидаем, что в корзине нет товаров
+# Ожидаем, что есть текст о том что корзина пуста
