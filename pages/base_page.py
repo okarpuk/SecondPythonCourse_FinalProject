@@ -20,6 +20,7 @@ class BasePage():                                 # базовая страни�
         link = self.browser.find_element(*BasePageLocators.LOGIN_LINK) # символ * указывает на то, что мы передали именно пару, и этот кортеж нужно распаковать
         link.click()
 
+
     def go_to_basket_page(self):
         link = self.browser.find_element(*BasePageLocators.BASKET_LINK)
         link.click()
